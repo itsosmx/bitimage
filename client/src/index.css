@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text: #071e0c;
+    --background: #f5fdf7;
+    --primary: #3ace5c;
+    --secondary: #8ccbe3;
+    --accent: #5e80d7;
+  }
+  .dark {
+    --text: #e2f8e7;
+    --background: #020903;
+    --primary: #31c453;
+    --secondary: #1c5a73;
+    --accent: #284a9f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f6f8fa;
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (min-width: 480px) {
+  .card:nth-child(7n + 1) {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+  }
+}
+
+.prompt::-webkit-scrollbar {
+  width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
