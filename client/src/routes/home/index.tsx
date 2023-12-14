@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Loader, PostCard } from "../../components";
+import { Loader, PostCard, Searchbar } from "../../components";
+import { PostProps } from "../../types";
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
-  const [posts, setPosts] = useState<File | null>([]);
+  const [posts, setPosts] = useState<PostProps[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
@@ -12,7 +13,9 @@ export default function Home() {
         <h1 className="text-5xl font-bold capitalize text-primary">Unleash the power of imagination</h1>
         <p className="text-text ">Transforms your ideas into stunning visuals. Whether you're a seasoned designer or a creative enthusiast.</p>
       </div>
-      <div>Form</div>
+      <div>
+        <Searchbar />
+      </div>
       <div>
         {loading ? (
           <Loader />
