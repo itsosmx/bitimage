@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Loader, PostCard, Searchbar } from "../../components";
+import { Loader, PostCard, FormField } from "../../components";
 import { PostProps } from "../../types";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <p className="text-text ">Transforms your ideas into stunning visuals. Whether you're a seasoned designer or a creative enthusiast.</p>
       </div>
       <div>
-        <Searchbar />
+        <FormField placeholder="Imagine.." />
       </div>
       <div>
         {loading ? (
